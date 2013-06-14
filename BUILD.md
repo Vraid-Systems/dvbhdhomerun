@@ -28,6 +28,7 @@ http://bchavez.bitarmory.com/archive/2013/01/16/compiling-kernel-modules-for-ras
 
 build/load dvb .ko's for ARM A9 Cortex
 ------------
+- cd into the `kernel` directory of this repo
 - make clean
 - make CROSS_COMPILE=arm-none-linux-gnueabi- CFLAGS="-march=armv7-a -mcpu=cortex-a9 -marm -mlittle-endian -mglibc"
 KERNEL_DIR=path/to/buildroot-linux-kernel-m3
@@ -40,6 +41,7 @@ to your ARM box and load them:
 
 build/load userhdhomerun for ARM A9 Cortex
 ------------
+- cd into the `userhdhomerun` directory of this repo
 - Be sure to set the `SET(LIBHDHOMERUN_PATH /usr/lib/libhdhomerun)` line in
 `CMakeLists.txt` correctly to the location of your cross compiled libhdhomerun.
 - make CC=arm-none-linux-gnueabi-gcc CXX=arm-none-linux-gnueabi-g++ CFLAGS="-march=armv7-a -mcpu=cortex-a9 -marm -mlittle-endian -mglibc"
