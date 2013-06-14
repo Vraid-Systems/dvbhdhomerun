@@ -1,0 +1,137 @@
+dvbhdhomerun (0.0.15-1) lucid; urgency=low
+
+  * Version 0.0.15
+    * Fix page allocation error, was memory fragmentation (ticket 14).
+    * Default build type is now "Release" not "Debug"
+    * Enable libhdhomerun debugging from conf file.
+    * Kernel 3.7.x fix, dvb kernel headers moved. 
+
+ -- Villy Thomsen <tfylliv@gmail.com>  Sun, 17 feb 2013 22:00:00 +0100
+
+dvbhdhomerun (0.0.14-1) lucid; urgency=low
+
+  * Preparing for Version 0.0.15
+    * Sort the tuners based on their name, so they appear in same order 
+      in /dev/adapter/xxx.
+
+ -- Villy Thomsen <tfylliv@gmail.com>  Tue, 30 oct 2012 22:00:00 +0100
+
+dvbhdhomerun (0.0.13-1) precise; urgency=low
+
+  * Version 0.0.13 for precise (12.04+)
+    * Yet another attempt at getting a build correct at Launchpad for
+      precise++ (sigh...).
+
+ -- Villy Thomsen <tfylliv@gmail.com>  Tue, 17 sep 2012 22:00:00 +0100
+
+dvbhdhomerun (0.0.12-1) precise; urgency=low
+
+  * Version 0.0.12 for precise (12.04+)
+    * Exactly the same version as 0.0.1 just with version number bumbed due
+      to sillyness in launchpad.
+
+ -- Villy Thomsen <tfylliv@gmail.com>  Mon, 17 sep 2012 22:00:00 +0100
+
+
+dvbhdhomerun (0.0.11-1) lucid; urgency=low
+
+  * Version 0.0.11
+  * Userhdhomerun:
+    * -d added to disable logging.
+    * Compile fixes for kernel 3.3, 3.4 and 3.5.
+    * Use select() and change signal handling behaviour slightly.
+
+  * Kernel:
+    * Add select() support to kernel module.
+
+ -- Villy Thomsen <tfylliv@gmail.com>  Sun, 16 sep 2012 13:00:00 +0100
+
+
+dvbhdhomerun (0.0.10-1) lucid; urgency=low
+
+  * Version 0.0.10
+  * Userhdhomerun:
+    * Check for existence of tuner_count in libhdhomerun.
+    * Make sure logrotate of /var/log/dvbhdhomerun.log is handled, 
+      e.g. open a new file when logrotate takes place (ticket 5).
+    * Log explicitly when DVB-C is used when autodetecting.
+    * Each tuner can be disabled (in /etc/dvbhdhomerun).
+
+  * Kernel:
+    * Use HDHomeRun ID in device name (if configured in /etc/dvbhdhomerun).
+
+  * Ubuntu package changes:
+    * Upstart: Allow respawn twice within 3600 seconds if we crash.
+    * Upstart: Use "net-device-up IFACE!=lo", wait untill network is ready.
+
+ -- Villy Thomsen <tfylliv@gmail.com>  Sun, 06 mar 2011 20:00:00 +0100
+
+
+dvbhdhomerun (0.0.9-2) oneiric; urgency=low
+
+  * Correctly build -dbg package to save debug symbols.
+
+ -- Villy Thomsen <tfylliv@gmail.com>  Sat, 19 nov 2011 17:00:00 +0100
+
+dvbhdhomerun (0.0.9-1) lucid; urgency=low
+
+  * Version 0.0.9
+  * Userhdhomerun:
+    * Create log file at /var/log/dvbhdhomerun.log when run as daemon.
+    * Use upstart for running as a service/daemon.
+    * Check for network problems, log after recording.
+    * Cmd line options help text on -?.
+
+  * Ubuntu package changes:
+    * Kernel module now DKMS. Automatic build + rebuild on new kernels.
+    * Log rotate /var/log/dvbhdhomerun.log
+
+ -- Villy Thomsen <tfylliv@gmail.com>  Sun, 06 mar 2011 20:00:00 +0100
+
+dvbhdhomerun (0.0.8-1) lucid; urgency=low
+
+  * Daemonize userhdhomerun, so we can run it as a daemon.
+  * Added cmd line options to userhdhomerun -f, -u, -g.
+  * Install udev rules from deb package.
+
+ -- Villy Thomsen <tfylliv@gmail.com>  Fri, 31 Dec 2010 15:00:00 +0100
+
+dvbhdhomerun (0.0.7-1) lucid; urgency=low
+
+  * Version 0.0.7
+  * Bug, DVB-T switched with DVB-C in conf file.
+
+ -- Villy Thomsen <tfylliv@gmail.com>  Wed, 09 Dec 2010 21:00:41 +0100
+
+dvbhdhomerun (0.0.6-1) lucid; urgency=low
+
+  * Version 0.0.6
+  * /etc/dvbhdhomerun conf file. Choose tuner type ATSC/DVB-C/DVB-T
+  * DVB-T added
+
+ -- Villy Thomsen <tfylliv@gmail.com>  Wed, 08 Dec 2010 21:00:41 +0100
+
+dvbhdhomerun (0.0.2-2) lucid; urgency=low
+
+  * Build for lucid in launchpad.
+  * Compile under Ubuntu 10.10. Kfifo interface change in kernel 2.6.33.
+  * ATSC reported ok by testers.
+  * Removed dependency on QT, now use pthreads.
+  * Fixed all "leaks" reported by valgrind.
+  * Catch ctrl-c and close down threads nicely on exit in userhdhomerun.
+
+ -- Villy Thomsen <tfylliv@gmail.com>  Sun, 07 Nov 2010 18:23:41 +0100
+
+dvbhdhomerun (0.0.2-1) maverick; urgency=low
+
+  * Version 0.0.2
+  * Ubuntu/Debian packages now possible.
+  * Default debug level = nothing.
+
+ -- Villy Thomsen <tfylliv@gmail.com>  Sun, 17 Oct 2010 16:51:49 +0200
+
+dvbhdhomerun (0.0.1-1) unstable; urgency=low
+
+  * Initial release
+
+ -- Villy Thomsen <tfylliv@gmail.com>  Sun, 03 Oct 2010 23:30:55 +0200
