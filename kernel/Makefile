@@ -1,5 +1,8 @@
-KERNEL_VERSION	:= `uname -r`
-KERNEL_DIR	:= /lib/modules/$(KERNEL_VERSION)/build
+ifeq ($(KERNEL_DIR),)
+KERNEL_VERSION  := `uname -r`
+KERNEL_DIR      := /lib/modules/$(KERNEL_VERSION)/build
+endif
+
 PWD		:= $(shell pwd)
 
 # 3.7.x
