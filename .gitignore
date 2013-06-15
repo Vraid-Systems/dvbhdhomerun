@@ -1,0 +1,9 @@
+# Recursive Extension-based ignore
+*.cmake
+
+# Exact path ignore
+/userhdhomerun/build
+/userhdhomerun/CMakeCache.txt
+/userhdhomerun/CMakeFiles
+/userhdhomerun/config.h
+/userhdhomerun/nbproject/private
