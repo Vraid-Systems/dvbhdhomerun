@@ -5,7 +5,7 @@ IF(COMMAND cmake_policy)
    CMAKE_policy(SET CMP0003 NEW)
 ENDIF(COMMAND cmake_policy)
 
-SET(LIBHDHOMERUN_PATH /usr/lib/libhdhomerun)
+SET(LIBHDHOMERUN_PATH ../../libhdhomerun)
 
 SET(CMAKE_BUILD_TYPE Release)
 #SET(CMAKE_CXX_FLAGS_PROFILE "-pg")
@@ -33,7 +33,7 @@ CHECK_STRUCT_HAS_MEMBER("struct hdhomerun_discover_device_t" tuner_count ${LIBHD
 CONFIGURE_FILE(${CMAKE_CURRENT_SOURCE_DIR}/config.h.in ${CMAKE_CURRENT_BINARY_DIR}/config.h)
 
 INCLUDE_DIRECTORIES(
-	${CMAKE_CURRENT_BINARY_DIR} 
+	${CMAKE_CURRENT_BINARY_DIR}
 	${LIBHDHOMERUN_PATH}
 )
 
