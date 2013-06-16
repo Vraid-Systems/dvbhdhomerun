@@ -36,7 +36,7 @@ class HdhomerunController
   ~HdhomerunController();
 
   HdhomerunTuner* GetTuner(int id);
-  
+
  private:
   std::vector<HdhomerunTuner*> m_tuners;
 
