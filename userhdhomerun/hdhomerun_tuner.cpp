@@ -256,10 +256,12 @@ int HdhomerunTuner::Tune(int _freq) {
 
 int HdhomerunTuner::ReadStatus() {
     int status = 0;
-
     struct hdhomerun_tuner_status_t hdhomerun_status;
+
     int ret = hdhomerun_device_get_tuner_status(m_device, NULL, &hdhomerun_status);
     if (ret > 0) {
+        LOG() << "sym qual: " << hdhomerun_status.symbol_error_quality << endl;
+
         if (hdhomerun_status.symbol_error_quality == 100) {
             status = FE_HAS_SIGNAL
                     | FE_HAS_CARRIER
@@ -268,8 +270,6 @@ int HdhomerunTuner::ReadStatus() {
                     | FE_HAS_LOCK;
         }
     }
-
-    LOG() << "sym qual: " << hdhomerun_status.symbol_error_quality << endl;
 
     return status;
 }

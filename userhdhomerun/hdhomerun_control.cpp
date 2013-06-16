@@ -191,8 +191,7 @@ void Control::ProcessMessages() {
 }
 
 void Control::FE_SET_Frontend(const struct dvbhdhomerun_control_mesg& _mesg) {
-    printf("FE_SET_FRONTEND, freq: %d\n",
-            _mesg.u.frequency);
+    LOG() << "FE_SET_FRONTEND, freq: " << _mesg.u.frequency << endl;
 
     // Need to send stuff to HDHOMERUN
     HdhomerunTuner* tuner = m_hdhomerun->GetTuner(_mesg.id);
