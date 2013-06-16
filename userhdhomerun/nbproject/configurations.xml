@@ -9,28 +9,14 @@
         </df>
         <df name="CompilerIdC">
           <in>CMakeCCompilerId.c</in>
-          <in>a.exe</in>
         </df>
         <df name="CompilerIdCXX">
           <in>CMakeCXXCompilerId.cpp</in>
         </df>
         <df name="cppcheck.dir">
-          <in>DependInfo.cmake</in>
-          <in>build.make</in>
-          <in>cmake_clean.cmake</in>
-          <in>progress.make</in>
         </df>
         <df name="userhdhomerun.dir">
-          <in>DependInfo.cmake</in>
-          <in>build.make</in>
-          <in>cmake_clean.cmake</in>
-          <in>depend.make</in>
-          <in>flags.make</in>
-          <in>link.txt</in>
-          <in>progress.make</in>
         </df>
-        <in>CMakeOutput.log</in>
-        <in>CMakeSystem.cmake</in>
       </df>
       <in>conf_inifile.cpp</in>
       <in>conf_inifile.h</in>

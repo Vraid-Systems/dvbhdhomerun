@@ -2,6 +2,7 @@
 *.cmake
 
 # Exact path ignore
+/kernel/nbproject/private
 /userhdhomerun/build
 /userhdhomerun/CMakeCache.txt
 /userhdhomerun/CMakeFiles
