@@ -36,7 +36,7 @@
 
 using namespace std;
 
-HdhomerunTuner::HdhomerunTuner(int _device_id, int _device_ip, int _tuner, struct hdhomerun_debug_t* _dbg)
+HdhomerunTuner::HdhomerunTuner(uint32_t _device_id, uint32_t _device_ip, unsigned int _tuner, struct hdhomerun_debug_t* _dbg)
 : m_device(0), m_dbg(_dbg), m_stream(false), m_prevFreq(0),
 m_deviceId(_device_id), m_deviceIP(_device_ip), m_tuner(_tuner),
 m_kernelId(-1), m_useFullName(false), m_isDisabled(false),
@@ -52,8 +52,7 @@ m_type(HdhomerunTuner::NOT_SET) {
         if (conf.GetSecValue(m_name, "tuner_type", tunerType)) {
             if (tunerType == "DVB-C") {
                 m_type = HdhomerunTuner::DVBC;
-            }
-            else if (tunerType == "DVB-T") {
+            } else if (tunerType == "DVB-T") {
                 m_type = HdhomerunTuner::DVBT;
             } else if (tunerType == "ATSC") {
                 m_type = HdhomerunTuner::ATSC;

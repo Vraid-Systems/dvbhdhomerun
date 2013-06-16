@@ -33,7 +33,7 @@
 class HdhomerunTuner : public ThreadPthread
 {
 public:
-   enum Type 
+   enum Type
       {
          NOT_SET,
          DVBC,
@@ -42,9 +42,9 @@ public:
       };
 
 public:
-   HdhomerunTuner(int _device_id, int _device_ip, int _tuner, struct hdhomerun_debug_t* _dbg);
+   HdhomerunTuner(uint32_t _device_id, uint32_t _device_ip, unsigned int _tuner, struct hdhomerun_debug_t* _dbg);
    ~HdhomerunTuner();
-  
+
    void run();
 
    int Tune(int _freq);
@@ -92,16 +92,16 @@ private:
    struct hdhomerun_device_t* m_device;
    struct hdhomerun_debug_t* m_dbg;
    bool m_stream;
-  
+
    std::string m_pes_filter;
 
    std::vector<int> m_pidFilters;
 
    int m_prevFreq;
 
-   int m_deviceId;
-   int m_deviceIP;
-   int m_tuner;
+   uint32_t m_deviceId;
+   uint32_t m_deviceIP;
+   unsigned int m_tuner;
 
    int m_kernelId;
 
@@ -112,7 +112,7 @@ private:
 
    // Name returned from hdhomerun lib
    std::string m_name;
-  
+
    // /dev/hdhomerun_dataX device
    std::string m_nameDataDevice;
 
